@@ -11,27 +11,45 @@ import SwiftUI
 struct RedView: View {
     
     @State private var textField: String = ""
+    @State private var navigationIsActive: Bool = true
+    @State private var yellowIsActive: Bool = false
+    @State private var greenIsActive: Bool = false
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color(.systemRed)
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
-                    TextField("Destination View Title", text: $textField)
-                        .textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-                    NavigationLink(destination: YellowView(title: textField)) {
-                        Text("Navigate")
+        ZStack {
+            Color(.systemRed)
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                TextField("Destination View Title", text: $textField)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                HStack {
+                    NavigationLink(destination: YellowView(title: textField), isActive: navigationIsActive ? $yellowIsActive : .constant(false)) {
+                        Text("Push to Yellow")
                     }
+                    .padding(.trailing)
+                    NavigationLink(destination: GreenView(title: textField), isActive: navigationIsActive ? $greenIsActive : .constant(false)) {
+                        Text("Push to Green")
+                    }
+                    .padding(.leading)
                 }
+                .padding()
+                
+                Toggle(isOn: $navigationIsActive) {
+                    EmptyView()
+                }
+                .labelsHidden()
             }
-            .navigationBarTitle("Red")
         }
+        .navigationBarTitle("Red")
     }
 }
 
 struct RedView_Previews: PreviewProvider {
     static var previews: some View {
-        RedView()
+        NavigationView {
+            RedView()
+        }
     }
 }

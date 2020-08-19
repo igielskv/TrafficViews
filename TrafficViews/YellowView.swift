@@ -10,15 +10,16 @@ import SwiftUI
 
 struct YellowView: View {
     
-    var title: String = "Yellow"
+    var title: String
+    
+    init(title: String = "Yellow") {
+        self.title = title.isEmpty ? "Yellow" : title
+    }
     
     var body: some View {
         ZStack {
             Color(.systemYellow)
                 .edgesIgnoringSafeArea(.all)
-            NavigationLink(destination: GreenView()) {
-                Text("Navigate")
-            }
         }
         .navigationBarTitle(title)
     }

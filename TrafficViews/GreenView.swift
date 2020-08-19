@@ -9,15 +9,19 @@
 import SwiftUI
 
 struct GreenView: View {
+    
+    var title: String
+    
+    init(title: String = "Green") {
+        self.title = title.isEmpty ? "Green" : title
+    }
+    
     var body: some View {
         ZStack {
             Color(.systemGreen)
                 .edgesIgnoringSafeArea(.all)
         }
-        .navigationBarTitle("Green")
-        .navigationBarItems(trailing: Button(action: {}) {
-            Text("Pop")
-        })
+        .navigationBarTitle(title)
     }
 }
 
