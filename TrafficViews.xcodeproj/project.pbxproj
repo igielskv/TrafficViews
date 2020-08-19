@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		9F69310D24ED40F6004F33FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F69310C24ED40F6004F33FC /* Assets.xcassets */; };
 		9F69311024ED40F6004F33FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F69310F24ED40F6004F33FC /* Preview Assets.xcassets */; };
 		9F69311324ED40F6004F33FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F69311124ED40F6004F33FC /* LaunchScreen.storyboard */; };
+		9F69311B24ED421A004F33FC /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69311A24ED421A004F33FC /* RedView.swift */; };
+		9F69311D24ED4226004F33FC /* YellowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69311C24ED4226004F33FC /* YellowView.swift */; };
+		9F69311F24ED4D78004F33FC /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69311E24ED4D78004F33FC /* NavigationState.swift */; };
+		9F69312124ED4EF3004F33FC /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69312024ED4EF3004F33FC /* GreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		9F69310F24ED40F6004F33FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F69311224ED40F6004F33FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F69311424ED40F6004F33FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F69311A24ED421A004F33FC /* RedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedView.swift; sourceTree = "<group>"; };
+		9F69311C24ED4226004F33FC /* YellowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowView.swift; sourceTree = "<group>"; };
+		9F69311E24ED4D78004F33FC /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		9F69312024ED4EF3004F33FC /* GreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				9F69310624ED40F5004F33FC /* AppDelegate.swift */,
 				9F69310824ED40F5004F33FC /* SceneDelegate.swift */,
 				9F69310A24ED40F5004F33FC /* ContentView.swift */,
+				9F69311A24ED421A004F33FC /* RedView.swift */,
+				9F69311C24ED4226004F33FC /* YellowView.swift */,
+				9F69312024ED4EF3004F33FC /* GreenView.swift */,
+				9F69311E24ED4D78004F33FC /* NavigationState.swift */,
 				9F69310C24ED40F6004F33FC /* Assets.xcassets */,
 				9F69311124ED40F6004F33FC /* LaunchScreen.storyboard */,
 				9F69311424ED40F6004F33FC /* Info.plist */,
@@ -111,7 +123,7 @@
 				};
 			};
 			buildConfigurationList = 9F6930FE24ED40F5004F33FC /* Build configuration list for PBXProject "TrafficViews" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -147,7 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F69310724ED40F5004F33FC /* AppDelegate.swift in Sources */,
+				9F69311F24ED4D78004F33FC /* NavigationState.swift in Sources */,
+				9F69311D24ED4226004F33FC /* YellowView.swift in Sources */,
+				9F69312124ED4EF3004F33FC /* GreenView.swift in Sources */,
 				9F69310924ED40F5004F33FC /* SceneDelegate.swift in Sources */,
+				9F69311B24ED421A004F33FC /* RedView.swift in Sources */,
 				9F69310B24ED40F5004F33FC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
