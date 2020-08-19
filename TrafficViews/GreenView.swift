@@ -13,12 +13,11 @@ struct GreenView: View {
         ZStack {
             Color(.systemGreen)
                 .edgesIgnoringSafeArea(.all)
-            Button(action: {
-                
-            }) {
-                Text("Dismiss")
-            }
-        }.navigationBarTitle("Green")
+        }
+        .navigationBarTitle("Green")
+        .navigationBarItems(trailing: Button(action: {}) {
+            Text("Pop")
+        })
     }
 }
 

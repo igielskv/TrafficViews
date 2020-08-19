@@ -16,7 +16,8 @@ struct YellowView: View {
             NavigationLink(destination: GreenView()) {
                 Text("Navigate")
             }
-        }.navigationBarTitle("Yellow")
+        }
+        .navigationBarTitle("Yellow")
     }
 }
 

@@ -17,7 +17,8 @@ struct RedView: View {
                 NavigationLink(destination: YellowView()) {
                     Text("Navigate")
                 }
-            }.navigationBarTitle("Red", displayMode: .inline)
+            }
+            .navigationBarTitle("Red")
         }
     }
 }
