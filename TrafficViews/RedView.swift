@@ -9,13 +9,20 @@
 import SwiftUI
 
 struct RedView: View {
+    
+    @State private var textField: String = ""
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color(.systemRed)
                     .edgesIgnoringSafeArea(.all)
-                NavigationLink(destination: YellowView()) {
-                    Text("Navigate")
+                VStack {
+                    TextField("Destination View Title", text: $textField)
+                        .textFieldStyle(RoundedBorderTextFieldStyle()).padding()
+                    NavigationLink(destination: YellowView(title: textField)) {
+                        Text("Navigate")
+                    }
                 }
             }
             .navigationBarTitle("Red")

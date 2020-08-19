@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct YellowView: View {
+    
+    var title: String = "Yellow"
+    
     var body: some View {
         ZStack {
             Color(.systemYellow)
@@ -17,7 +20,7 @@ struct YellowView: View {
                 Text("Navigate")
             }
         }
-        .navigationBarTitle("Yellow")
+        .navigationBarTitle(title)
     }
 }
 
